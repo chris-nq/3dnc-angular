@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
-import { CoreModule } from '../core/core.module';
 import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { ButtonComponent } from './components/button/button.component';
 
 
 /**
@@ -18,14 +19,17 @@ import { RouterModule } from '@angular/router';
  * syntax without putting them in providers: [ ] of any module…
  */
 @NgModule({
-  declarations: [],
+  declarations: [
+    ButtonComponent
+  ],
   imports: [
-    CoreModule,
+    CommonModule,
     RouterModule,
   ],
   exports: [
-    CoreModule,
+    CommonModule,
     RouterModule,
+    ButtonComponent,
   ]
 })
 export class SharedModule { }
