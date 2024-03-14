@@ -95,6 +95,24 @@
             ],
             "scripts": []
           }
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "configDir": "projects/app-3dnc/.storybook",
+            "browserTarget": "app-3dnc:build",
+            "compodoc": false,
+            "port": 6006
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "configDir": "projects/app-3dnc/.storybook",
+            "browserTarget": "app-3dnc:build",
+            "compodoc": false,
+            "outputDir": "storybook-static"
+          }
         }
       }
     }
